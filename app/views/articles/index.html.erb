@@ -1,8 +1,9 @@
-<h1>HomePage</h1>
-
-    <%# articles here is coming from the controller with articles variable %>
+ <%# articles here is coming from the controller with articles variable %>
 <ul>
-  <%= @articles.each do |article| %>
+  <% @articles.each do |article| %>
   <li><%= link_to article.title, article_path(article) %></li>
+  <p><%= article.content %></p>
   <% end %>
 </ul>
+
+<%= link_to 'Create a new Post', new_article_path %>
