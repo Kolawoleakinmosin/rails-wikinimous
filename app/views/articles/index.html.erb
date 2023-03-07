@@ -1,0 +1,8 @@
+<h1>HomePage</h1>
+
+    <%# articles here is coming from the controller with articles variable %>
+<ul>
+  <%= @articles.each do |article| %>
+  <li><%= link_to article.title, article_path(article) %></li>
+  <% end %>
+</ul>
